@@ -1,4 +1,4 @@
 stackAssert:
-	gcc stackAssert.c -o stackAssert
+	gcc -g stackAssert.c -o stackAssert
 uninstall:
 	rm stackAssert

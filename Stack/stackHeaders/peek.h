@@ -1,10 +1,12 @@
 
-int peek(stack *s)
+int peek(stack *s,int *elt)
 {
     if(!isEmpty(s))
     {
-        fprintf(stdout,"Peek Element: %d\n",s->top->data);
+        *elt=s->top->data;
+        //fprintf(stdout,"Peek Element: %d\n",*elt);
         return 1;
     }
+    *elt=-1;
     return 0;
 }

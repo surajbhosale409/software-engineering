@@ -2,7 +2,7 @@
 
 int isEmpty(stack *s)
 {
-    if(s->currentSize==0)
+    if(s && s->currentSize==0)
         return 1;
     return 0;
 }

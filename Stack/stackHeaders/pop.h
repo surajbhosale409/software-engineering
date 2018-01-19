@@ -7,7 +7,7 @@ int pop(stack *s)
         toPop=s->top;
         s->top=toPop->next;
         
-        fprintf(stdout,"Popped %d\n",toPop->data);
+        //fprintf(stdout,"Popped %d\n",toPop->data);
         
         free(toPop);
         s->currentSize--;

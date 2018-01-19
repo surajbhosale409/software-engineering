@@ -5,6 +5,7 @@
 typedef struct stackLinkedList
 {
     int data;
+    struct stack *s;
     struct stackLinkedList *next;
 }stackLinkedList;
 
@@ -13,5 +14,6 @@ typedef struct stack
 {
     int capacity;
     int currentSize;
+    int typeOfData;
     stackLinkedList *top;
 }stack;

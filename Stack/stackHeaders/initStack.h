@@ -1,14 +1,15 @@
 
-stack * initStack(int maxSize)
+int initStack(stack **s,int maxSize)
 {
-    stack *s= (stack *) malloc (sizeof(stack));
+    *s= (stack *) malloc (sizeof(stack));
     
-    if(s)
+    if(*s)
     {
-        s->currentSize=0;
-        s->capacity=maxSize;
-        s->top=NULL;
+        (*s)->currentSize=0;
+        (*s)->capacity=maxSize;
+        (*s)->top=NULL;
+        return 1;
     }
     
-    return s;
+    return 0;
 }

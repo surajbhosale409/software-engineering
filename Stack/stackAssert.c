@@ -6,7 +6,6 @@
 
 int main()
 {
-    stack *s=initStack(MAX_SIZE);
-    stackAssert(s);
+    stackAssert();
     return 0;
 }
