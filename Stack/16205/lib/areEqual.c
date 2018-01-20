@@ -1,5 +1,6 @@
+#include"stack.h"
 
-int areEqual(stack *s1, stack *s2)
+errcode areEqual(stack *s1, stack *s2)
 {
     int elt1,elt2;
     stack *copier1,*copier2;
@@ -7,8 +8,8 @@ int areEqual(stack *s1, stack *s2)
     if(s1->typeOfData != s2->typeOfData)
         return 0;
 
-    initStack(&copier1,s1->capacity);
-    initStack(&copier2,s2->capacity);
+    constructStack(&copier1,s1->capacity);
+    constructStack(&copier2,s2->capacity);
     copy(copier1,s1);
     copy(copier2,s2);
     
@@ -28,6 +29,10 @@ int areEqual(stack *s1, stack *s2)
                 if(!isEmpty(copier1) || !isEmpty(copier2))
                     return 0;
                 return 1;
+
+        case 1: //type: stack
+                break;
+
     }
 }
 

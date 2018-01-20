@@ -1,5 +1,6 @@
+#include"stack.h"
 
-int push(stack *s,int data)
+errcode push(stack *s,int data)
 {
     if(s && !isFull(s))
     {

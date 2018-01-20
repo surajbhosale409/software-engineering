@@ -1,17 +1,22 @@
 //Author:       Suraj R Bhosale
 //Date:         18 Jan 2018
-//Description:  This is header file for stack assertions, Here stack will be tested based on few assertions
+//Description:  This is code for stack assertions, Here stack will be tested based on few assertions
 
+#include<stdio.h>
+#include<stdlib.h>
+#include"../lib/stack.h"
 #include<assert.h>
 #define TRUE 1
 #define FALSE 0
 
-void stackAssert()
+void stackAssert(int size)
 {
   stack *s,*sCopy;
   int elt1,elt2;
 
-  assert( initStack(&s,MAX_SIZE)==TRUE );
+  assert(size<MAX_SIZE);
+
+  assert( constructStack(&s,size)==TRUE );
   assert( push(s,10)==TRUE ); 
   assert( peek(s,&elt1)==TRUE );
   assert( push(s,12)==TRUE );
@@ -21,7 +26,7 @@ void stackAssert()
 
   assert( push(s,15)==TRUE ); 
   assert( push(s,16)==TRUE ); 
-  assert( initStack(&sCopy,MAX_SIZE)==TRUE );
+  assert( constructStack(&sCopy,size)==TRUE );
   assert( copy(sCopy,s)==TRUE);
  
   peek(s,&elt1);
@@ -31,5 +36,15 @@ void stackAssert()
 
   assert( push(s,17)==TRUE ); 
 
-  assert( areEqual(s,sCopy)==TRUE );
+  //assert( areEqual(s,sCopy)==TRUE );   //This assertion will fail as two stacks are not equal
+
+  fprintf(stdout,"Success\n");
+}
+
+
+
+int main(int argc, char *argv[])
+{
+    stackAssert(atoi(argv[1]));
+    return 0;
 }

@@ -1,5 +1,6 @@
+#include"stack.h"
 
-int pop(stack *s)
+errcode pop(stack *s)
 {
     stackLinkedList *toPop;
     if(!isEmpty(s))

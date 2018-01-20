@@ -1,5 +1,6 @@
+#include"stack.h"
 
-int copy(stack *dest,stack *source)
+errcode copy(stack *dest,stack *source)
 {
     stack *copier;
 
@@ -8,7 +9,7 @@ int copy(stack *dest,stack *source)
     if( !dest || !source)
         return 0;
     
-    if(!initStack(&copier,source->capacity))
+    if(!constructStack(&copier,source->capacity))
         return 0;
     
     //fprintf(stdout,"Copying stacks\n");

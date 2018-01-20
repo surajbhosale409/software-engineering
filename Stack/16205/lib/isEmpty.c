@@ -1,6 +1,6 @@
+#include"stack.h"
 
-
-int isEmpty(stack *s)
+errcode isEmpty(stack *s)
 {
     if(s && s->currentSize==0)
         return 1;

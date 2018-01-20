@@ -1,5 +1,7 @@
+#include"stack.h"
 
-int peek(stack *s,int *elt)
+
+errcode peek(stack *s,int *elt)
 {
     if(!isEmpty(s))
     {

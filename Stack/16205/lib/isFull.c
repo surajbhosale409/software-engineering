@@ -1,5 +1,6 @@
+#include"stack.h"
 
-int isFull(stack *s)
+errcode isFull(stack *s)
 {
     if (s && s->capacity==s->currentSize)
         return 1;
