@@ -20,9 +20,9 @@ errcode pop(stack *);
 errcode peek(stack *, int *);
 errcode isFull(stack *);
 errcode isEmpty(stack *);
-errcode constructStack(stack **, int);
-errcode destructStack(stack *);
-errcode copy(stack *, stack *);
+errcode constructStack(stack **);
+errcode destructStack(stack **);
+errcode copy(stack **, stack *);
 errcode areEqual(stack *, stack *);
 
 #endif

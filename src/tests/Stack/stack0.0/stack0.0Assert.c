@@ -4,7 +4,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include"../lib/stack.h"
+#include"../../../lib/Stack/stack0.0/stack.h"
 #include<assert.h>
 #define TRUE 1
 #define FALSE 0
@@ -16,18 +16,17 @@ void stackAssert(int size)
 
   assert(size<MAX_SIZE);
 
-  assert( constructStack(&s,size)==TRUE );
+  assert( constructStack(&s)==TRUE );
   assert( push(s,10)==TRUE ); 
   assert( peek(s,&elt1)==TRUE );
   assert( push(s,12)==TRUE );
   assert( pop(s)==TRUE );
   assert( pop(s)==TRUE );
-  assert( isEmpty(s)==TRUE);
 
   assert( push(s,15)==TRUE ); 
   assert( push(s,16)==TRUE ); 
-  assert( constructStack(&sCopy,size)==TRUE );
-  assert( copy(sCopy,s)==TRUE);
+  assert( constructStack(&sCopy)==TRUE );
+  assert( copy(&sCopy,s)==TRUE);
  
   peek(s,&elt1);
   peek(sCopy,&elt2);
@@ -37,7 +36,6 @@ void stackAssert(int size)
   assert( push(s,17)==TRUE ); 
 
   //assert( areEqual(s,sCopy)==TRUE );   //This assertion will fail as two stacks are not equal
-
   fprintf(stdout,"Success\n");
 }
 
