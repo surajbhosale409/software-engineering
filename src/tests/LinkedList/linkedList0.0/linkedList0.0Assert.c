@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
-#include"../linkedList.h"
+#include"../../../lib/LinkedList/linkedList0.0/linkedList.h"
 #define TRUE 1
 #define FALSE 0
 

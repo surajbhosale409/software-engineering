@@ -19,12 +19,3 @@ clean_stack0.0:
 	rm $(binLibPath)*.o
 	rm $(binLibPath)*.a
 
-install_stack0.0_test:
-	make install_stack0.0_test -C tests/
-
-clean_stack0.0_test:
-	make clean_stack0.0_test -C tests/
-
-run_stack0.0_test:
-	make run_stack0.0_test -C tests/
-

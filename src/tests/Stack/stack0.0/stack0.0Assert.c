@@ -4,7 +4,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include"../stack.h"
+#include"../../../lib/Stack/stack0.0/stack.h"
 #include<assert.h>
 #define TRUE 1
 #define FALSE 0

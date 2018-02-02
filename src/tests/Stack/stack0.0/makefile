@@ -2,14 +2,15 @@ CC = gcc
 CFLAGS = -c
 LFLAGS = -static
 
-binLibPath =  ../../../../../bin/lib/Stack/stack0.0/
-binTestPath =  ../../../../../bin/lib/Stack/stack0.0/tests/
+srcLibPath =  ../../../lib/Stack/stack0.0/
+binLibPath =  ../../../../bin/lib/Stack/stack0.0/
+binTestPath =  ../../../../bin/tests/Stack/stack0.0/
 
 createDir:
 	mkdir -p $(binTestPath)
 
 libstack0.0.a:
-	make install_stack0.0 -C ../
+	make install_stack0.0 -C $(srcLibPath)
 
 install_stack0.0_test: libstack0.0.a createDir
 	$(CC) $(CFLAG) $(LFLAGS) stack0.0Assert.c $(binLibPath)libstack0.0.a -o $(binTestPath)stack0.0Assert
