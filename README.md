@@ -45,7 +45,9 @@ e.g.
       lib
     /    \
  Stack   LinkedList
-   |
+
+  |
+
 stack0.0
 
 
