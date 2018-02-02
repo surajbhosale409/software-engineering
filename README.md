@@ -37,20 +37,15 @@ Following are few commands for building,testing and cleaning libraries that are 
 e.g.
 
 
-
-            se2-18
-          /       \
-        src      bin
-        /
-      lib
-    /    \
- Stack   LinkedList
-
-  |
-
+             se2-18
+           /       \
+         src      bin
+         /
+       lib
+      /   \
+   Stack  LinkedList
+    /
 stack0.0
-
-
 
 
 In above case you can build,clean stack0.0 library only from [ se2-18 , src , lib , Stack , stack0.0 ] this directories.
