@@ -32,11 +32,11 @@ Following are few commands for building,testing and cleaning libraries that are 
 
 [15]    make clean_stack1.0_test            :: For removing stack1.0 test program
 
-
 (Note: You can use above commands for building, cleaning and testing of only those libraries or tests that are in the current subtree of directory structure)
 
-
 e.g.
+
+
 
             se2-18
           /       \
@@ -47,6 +47,8 @@ e.g.
  Stack   LinkedList
    |
 stack0.0
+
+
 
 
 In above case you can build,clean stack0.0 library only from [ se2-18 , src , lib , Stack , stack0.0 ] this directories.
