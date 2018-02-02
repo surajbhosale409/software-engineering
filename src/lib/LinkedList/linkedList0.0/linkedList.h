@@ -13,3 +13,4 @@ node * deleteFront(node *);
 int length(node *);
 errcode areEqualLList(node *, node *);
 node * copyLList(node *, node *i);
+void destructList(node *);

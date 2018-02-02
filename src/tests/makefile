@@ -17,3 +17,13 @@ run_linkedlist0.0_test:
 clean_linkedlist0.0_test:
 	make clean_linkedlist0.0_test -C LinkedList/linkedList0.0
 
+install_stack1.0_test:
+	make install_stack1.0_test -C  Stack/stack1.0
+
+run_stack1.0_test:
+	make run_stack1.0_test -C  Stack/stack1.0
+
+clean_stack1.0_test:
+	make clean_stack1.0_test -C  Stack/stack1.0
+
+

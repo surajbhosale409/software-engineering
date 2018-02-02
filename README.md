@@ -12,7 +12,11 @@ Following are few commands for building,testing and cleaning libraries that are 
 [8]     make install_linkedlist0.0_test     :: For building linkedlist0.0 test program
 [9]     make run_linkedlist0.0_test         :: For running the linkedlist0.0 test program
 [10]    make clean_linkedlist0.0_test       :: For removing linkedlist0.0 test program
-
+[11]    make install_stack1.0               :: For building libstack1.0
+[12]    make clean_stack1.0                 :: For removing libstack1.0 library
+[13]    make install_stack1.0_test          :: For building stack1.0 test program
+[14]    make run_stack1.0_test              :: For running  stack1.0 test program
+[15]    make clean_stack1.0_test            :: For removing stack1.0 test program
 
 (Note: You can use above commands for building, cleaning and testing of only those libraries or tests that are in the current subtree of directory structure)
 
