@@ -2,6 +2,8 @@ CC = gcc
 CFLAG = -c
 binLibPath =  ../../../../bin/lib/LinkedList/linkedList0.0/
 
+.PHONY: install_linkedlist0.0 clean_linkedlist0.0
+
 createDir:
 	mkdir -p $(binLibPath)
 

@@ -1,29 +1,13 @@
+stack0.0Tests = tests/Stack/stack0.0
+stack1.0Tests = tests/Stack/stack1.0
+linkedList0.0Tests = tests/LinkedList/linkedList0.0
 
-install_stack0.0_test:
-	make install_stack0.0_test -C  Stack/stack0.0
+%stack0.0_test:
+	make $@ -C  $(stack0.0Tests)
 
-run_stack0.0_test:
-	make run_stack0.0_test -C  Stack/stack0.0
+%stack1.0_test:
+	make $@ -C  $(stack1.0Tests)
 
-clean_stack0.0_test:
-	make clean_stack0.0_test -C  Stack/stack0.0
-
-install_linkedlist0.0_test:
-	make install_linkedlist0.0_test -C LinkedList/linkedList0.0
-
-run_linkedlist0.0_test:
-	make run_linkedlist0.0_test -C LinkedList/linkedList0.0
-
-clean_linkedlist0.0_test:
-	make clean_linkedlist0.0_test -C LinkedList/linkedList0.0
-
-install_stack1.0_test:
-	make install_stack1.0_test -C  Stack/stack1.0
-
-run_stack1.0_test:
-	make run_stack1.0_test -C  Stack/stack1.0
-
-clean_stack1.0_test:
-	make clean_stack1.0_test -C  Stack/stack1.0
-
+%linkedlist0.0_test:
+	make $@ -C $(linkedList0.0Tests)
 
