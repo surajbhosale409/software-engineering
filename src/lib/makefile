@@ -1,13 +1,11 @@
-stack0.0 = Stack/stack0.0
-stack1.0 = Stack/stack1.0
-linkedList0.0 = LinkedList/linkedList0.0
+stackDir = Stack/
+linkedListDir = LinkedList/
 
-%stack0.0:
-	make $@ -C  $(stack0.0)
+stackObjects = install_stack0.0 install_stack1.0 clean_stack0.0 clean_stack1.0
+linkedListObjects = install_linkedlist0.0 clean_linkedlist0.0
 
-%stack1.0:
-	make $@ -C  $(stack1.0)
+$(stackObjects):
+	make $@ -C  $(stackDir)
 
-%linkedlist0.0:
-	make $@ -C $(linkedList0.0)
-
+$(linkedListObjects):
+	make $@ -C $(linkedListDir)

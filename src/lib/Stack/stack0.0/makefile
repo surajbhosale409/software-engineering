@@ -2,6 +2,8 @@ CC = gcc
 CFLAG = -c
 binLibPath =  ../../../../bin/lib/Stack/stack0.0/
 
+.PHONY: install_stack0.0 clean_stack0.0 libstack0.0.a creatDir
+
 createDir:
 	mkdir -p $(binLibPath)
 

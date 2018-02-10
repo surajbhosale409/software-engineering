@@ -1,13 +1,12 @@
-stack0.0Tests = tests/Stack/stack0.0
-stack1.0Tests = tests/Stack/stack1.0
-linkedList0.0Tests = tests/LinkedList/linkedList0.0
+stackTestsDir = Stack/
+linkedListTestsDir = LinkedList/
 
-%stack0.0_test:
-	make $@ -C  $(stack0.0Tests)
+stackTestObjects = install_stack0.0_test clean_stack0.0_test run_stack0.0_test install_stack1.0_test clean_stack1.0_test run_stack1.0_test
+linkedListTestObjects = install_linkedlist0.0_test clean_linkedlist0.0_test run_linkedlist0.0_test
 
-%stack1.0_test:
-	make $@ -C  $(stack1.0Tests)
+$(stackTestObjects):
+	make $@ -C  $(stackTestsDir)
 
-%linkedlist0.0_test:
-	make $@ -C $(linkedList0.0Tests)
+$(linkedListTestObjects):
+	make $@ -C $(linkedListTestsDir)
 

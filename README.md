@@ -4,7 +4,7 @@ Following are few commands for building,testing and cleaning libraries that are 
 
 [1]     make install_stack0.0               :: For building libstack0.0
 
-[2]     make insall_stack0.0_test           :: For building stack0.0 Test program
+[2]     make install_stack0.0_test           :: For building stack0.0 Test program
 
 [3]     make run_stack0.0_test              :: For running the stack0.0 test program
 
