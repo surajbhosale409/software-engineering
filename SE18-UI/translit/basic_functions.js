@@ -51,7 +51,7 @@ function parseCSV(input) {
 	for (var i = 0; i < (arr.length - 1); i ++) {
 		var temp = arr[i].split('",');
 		var temp2 = temp[2];
-		temp[2] = temp2.split(',');	
+		temp[2] = temp2.split(',');
 		temp = removequote(temp);
 		var key = temp[0];
 		dTol[key] = temp[2][0];

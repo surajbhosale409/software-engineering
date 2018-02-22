@@ -7,28 +7,43 @@
 		<script language="javascript" type="text/javascript" src="basic_functions.js"></script>
 		<script language="javascript" type="text/javascript" src="character_match.js"></script>	
 		<script language="javascript" type="text/javascript" src="transliteration.js"></script>
-		<script>
-			document.onkeydown = function(event) {
-				if(event.keyCode == 113) {
-					document.getElementById("devanagariText").innerHTML = document.getElementById("result").value;
-					loadDoc(revTransliterate);
-				}
-
-				if(event.keyCode == 115) {
-					document.getElementById("latinText").innerHTML = document.getElementById("result").value;
-					loadDoc(transliterate);
-				}
-			}
-		</script>
-	
+		
 	</head>
 	
 	<body>
-		<h3>Result</h3>
+        <div id="help">
+            <font size=4>translit</font>
+            <input onmouseover="onOverHelpButton()" onmouseout="onOutHelpButton()" type=button value="Help!" onclick="" />
+            <span id="helpclick" style="display:none;">Click for more help</span>
+        </div>
+
+        <br><br>
+		
+        <h3>Result</h3>
 		<textarea id="result" readonly></textarea>
-		<h3>Devanagari Text</h3>
-		<textarea id="devanagariText" oninput="loadDoc(revTransliterate)"></textarea> 
-		<h3>Latin Text</h3>
-		<textarea id="latinText" oninput="loadDoc(transliterate)"></textarea>		
-	</body>
+        <br>
+        
+        <h3>Input</h3>
+        <div id="radio">
+        <input type=radio name="lang" value="devanagariText" id="devanagariText" >Devanagari Text</input>
+        <input type=radio name="lang" value="latinText" id="latinText" >Latin Text</input>
+        <span id="inputhelp" style="display:none;">
+        <font color="orange" size=3>
+            Just select input language and start typing/pasting!!!
+        </font>
+        </span>
+        </div>
+        <br>
+        <textarea id="input"  oninput="controller()"></textarea>		
+        <br><br>
+
+        <p id="shortcuts">
+        <center>
+        <font size=2>
+        [F9]::Select and copy text from input box.   ||   [F10]::Select and copy text from result box.   ||   
+        [F1]::Devanagari to Latin transliteration.   ||   [F2]::Latin to Devanagari transliteration
+        </font>
+        </center>
+        </p>
+    </body>
 </html>

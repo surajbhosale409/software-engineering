@@ -13,3 +13,30 @@ textarea {
 	text-align: left;
 	font-size: 20px;
 }
+
+#radio {
+	position: relative;
+	left: 10%;
+	font-size: 20px;
+}
+
+#help {
+    position:relative;
+    left: 0%;
+    background-color:orange;
+    width:100%;
+}
+
+#help input {
+    position:relative;
+    height:50px;
+    left:85%;
+    width:10%;
+    border:2px solid grey;
+    background-color:orange;
+}
+
+#help span {
+    position:relative;
+    left:88%;
+}

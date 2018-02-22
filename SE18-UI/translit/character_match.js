@@ -5,7 +5,7 @@ function q0(input, output, map) {
 
 	else if (isSpecial(input[0], map[4][3])) {
 		output = q4(input, output, map);
-	} 
+	}
 
 	else if (isDigit(input[0], map[4][2])) {
 		output += map[1][input[0]];
@@ -75,7 +75,7 @@ function q2(input, output, map) {
 	else if (isSpecial(input[1], map[4][3])) {
 		output = q4(input.slice(1), output, map);
 	}
-	
+
 	else if (isDigit(input[1], map[4][2])) {
 		output += map[1][input[1]];
 		output = q0(input.slice(2), output, map);
@@ -116,7 +116,7 @@ function q3(input, output, map) {
 		output = q0(input.slice(2), output, map);
 	}
 
-	else if (isPunctuation(input[1], map[4][1])) { 
+	else if (isPunctuation(input[1], map[4][1])) {
 		output += input[1];
 		output = q0(input.slice(2), output, map);
 	}
@@ -144,9 +144,9 @@ function q4(input, output, map) {
 	}
 
 	else if (isSpecial(input[1], map[4][3])) {
-		output += input[0] 
+		output += input[0]
 		output = q4(input.slice(1), output, map);
-	} 
+	}
 
 	else if (isDigit(input[1], map[4][2])) {
 		output += input[0] + map[1][input[1]];
@@ -182,9 +182,9 @@ function q5(input, output, map) {
 	}
 
 	else if (isSpecial(input[1], map[4][3])) {
-		output += input[0] 
+		output += input[0]
 		output = q5(input.slice(1), output, map);
-	} 
+	}
 
 	else if (isDigit(input[1], map[4][2])) {
 		output += input[0] + map[1][input[1]];
@@ -208,8 +208,8 @@ function q5(input, output, map) {
 		var tempVal = map[0][input[0] + input[1]] ? [map[0][input[0] + input[1]], 'c'] : [map[2][input[0] + input[1]], 'm'];
 		output += (tempVal[0] === undefined) ? (input[0] + map[0][input[1]]) : (tempVal[1] === 'c' ? "्" + map[0][input[0] + input[1]] : map[2][input[0] + input[1]]);
 
-		output = tempVal[1] == 'm' ? q0(input.slice(2), output, map) : q1(input.slice(1), output, map); 
-				
+		output = tempVal[1] == 'm' ? q0(input.slice(2), output, map) : q1(input.slice(1), output, map);
+
 	}
 
 	return output;
